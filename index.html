@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TODO</title>
+</head>
+<body>
+    <div id="todo_app">
+        <div class="container">
+            <div class="todo" data-priority="high">
+                <form id="form-high" class="todo-form">
+                    <h2 class="todo__title">High</h2>
+                    <div class="add-task__field">
+                        <input class="add-task" type="text" placeholder="Добавить важных дел">
+                        <button type="submit" class="add-task-btn"><img src="images/close-icon.svg" alt=""></button>
+                    </div>
+                </form>
+                <div class="todo-list">
+                </div>
+            </div>
+
+            <div class="todo" data-priority="low">
+                <form id="form-low" class="todo-form">
+                    <h2 class="todo__title">Low</h2>
+                    <div class="add-task__field">
+                        <input class="add-task" type="text" placeholder="Добавить">
+                        <button type="submit" class="add-task-btn"><img src="images/close-icon.svg" alt=""></button>
+                    </div>
+                </form>
+                <div class="todo-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
