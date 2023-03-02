@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#todo_app {
+    margin: 0 auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    max-width: 476px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.container {
+    padding: 25px 8px;
+}
+
+
+/* TODO STYLES */
+
+.todo {
+    margin-bottom: 12px;
+}
+
+.todo__title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.add-task__field {
+    position: relative;
+}
+
+input:focus {
+    border-color: #000;
+    outline: none;
+}
+input[type="text"] {
+    border: 1px solid #989898;
+    border-radius: 6px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    padding: 12px;
+    width: 100%;
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+button[type="submit"] {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+/* TODO LIST STYLES  */
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.todo-list__item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 12px;
+    width: 100%;
+    max-width: 460px;
+    flex-wrap: nowrap;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.todo-list__item p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    flex-basis: 370px;
+    min-width: 0;
+    max-width: 370px;
+    overflow: hidden;
+}
+
+.delete-task {
+    transform: rotate(45deg);
+    background: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+}
+
+
+/* CIRCLE CHECKBOX */
+.round {
+    position: relative;
+  }
+  
+  .round label {
+    background-color: #fff;
+    border: 1px solid #998899;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    left: 0;
+    top: 0;
+  }
+  
+.round label:after {
+    background: #C4C4C4;
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    width: 15px;
+    opacity: 0;
+    position: absolute;
+    left: 2.5px;
+    top: 2.2px;
+}
+  
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+
+
+  .round input[type="checkbox"]:checked + label {
+    background-color: transparent;
+  }
+  
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
