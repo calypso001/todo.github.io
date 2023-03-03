@@ -56,7 +56,6 @@ for(let todo of todos) {
       let currentListItem = e.target.closest('.todo-list__item');
       deleteTask(currentListItem.querySelector('.todo-list__item-text').textContent);
       currentListItem.remove();
-      count--
     }
   
     if(e.target.classList.contains('checkbox')) {
