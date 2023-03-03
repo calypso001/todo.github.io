@@ -16,7 +16,12 @@ for(let form of forms) {
   
     if(currentInput.value.trim() === '') return;
   
-    addTask(currentInput.value, STATUSES.TO_DO, PRIORITIES[priority.toUpperCase()]);
+    let listIsUpdated = addTask(currentInput.value, STATUSES.TO_DO, PRIORITIES[priority.toUpperCase()]);
+    if(!listIsUpdated) {
+      currentInput.value = ''
+      return;
+    } ;
+
     render(currentTodoList, priority);
   
     currentInput.value = '';
@@ -68,9 +73,11 @@ for(let todo of todos) {
   function addTask(task, status = STATUSES.TO_DO, priority = PRIORITIES.LOW) {
     if(task.trim() === '') return;
     if(isValidTask(task)) {
-      alert('This task already was created')
+      alert('This task already was created');
+      return false;
     } else {
       list.push({name: task, status, priority})
+      return true;
     }
   }
 
